@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link";
 import { FaMap, FaInfoCircle, FaListUl, FaChartBar } from "react-icons/fa";
 

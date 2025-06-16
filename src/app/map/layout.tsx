@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 
 // Overridding metadata for this specific page
 export const metadata: Metadata = {
-  title: "Zone Define Map", // Page-specific title
+  title: "Zone Definintion Map",
 };
 
 export default function UseStateLayout({ children }: { children: ReactNode }) {
