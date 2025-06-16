@@ -4,7 +4,7 @@ import "@/app/lib/fix-leaflet-icons";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import "leaflet/dist/leaflet.css";
-import { MapContainer, TileLayer, GeoJSON, Tooltip } from "react-leaflet";
+import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 
 const ZONE_COLORS = [
   "#f87171", "#facc15", "#4ade80", "#60a5fa", "#c084fc",
