@@ -6,17 +6,17 @@ export default function HomePage() {
     <main className="bg-gradient-to-br from-white via-sky-50 to-blue-100 min-h-screen p-6 md:p-12 text-gray-900">
       {/* Hero */}
       <section className="text-center space-y-4 max-w-4xl mx-auto mb-20">
-        <h1 className="text-5xl font-extrabold text-blue-900 drop-shadow-md tracking-tight">
+        <p className="text-5xl font-extrabold text-blue-900 drop-shadow-md tracking-tight">
           Understanding Zoning in Wake Forest, NC
-        </h1>
+        </p>
         <p className="text-lg text-gray-700 max-w-2xl mx-auto drop-shadow-sm">
-          Zoning determines how land in a city can be used—whether for homes, businesses,
+          Zoning determines how land in a city or town can be used—whether for homes, businesses,
           factories, or parks. This educational tool helps residents understand the system
           shaping their neighborhoods.
         </p>
         <div className="mt-6 flex justify-center gap-4">
           <Link
-            href="/interactive-map"
+            href="/map"
             className="px-6 py-3 bg-blue-700 text-white font-semibold rounded-xl shadow-lg hover:bg-blue-800 transition"
           >
             View Interactive Map
@@ -32,9 +32,9 @@ export default function HomePage() {
 
       {/* 3D Zoning Types Section */}
       <section className="space-y-8 mb-24">
-        <h2 className="text-3xl font-bold text-center text-blue-800 mb-6 drop-shadow">
+        <p className="text-3xl font-bold text-center text-blue-800 mb-6 drop-shadow">
           Zoning Categories Explained
-        </h2>
+        </p>
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {
@@ -57,7 +57,7 @@ export default function HomePage() {
               key={title}
               className={`bg-gradient-to-br ${color} p-6 rounded-3xl shadow-xl transform transition hover:scale-105 hover:shadow-2xl`}
             >
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">{title} Zones</h3>
+              <p className="text-xl font-semibold text-gray-800 mb-2">{title} Zones</p>
               <p className="text-gray-700 text-sm">{text}</p>
             </div>
           ))}
@@ -66,7 +66,7 @@ export default function HomePage() {
 
       {/* Table of Contents */}
       <section className="space-y-6">
-        <h2 className="text-3xl font-bold text-blue-800 text-center mb-6">Site Contents</h2>
+        <p className="text-3xl font-bold text-blue-800 text-center mb-6">Site Contents</p>
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {[
             {
