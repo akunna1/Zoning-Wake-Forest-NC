@@ -42,4 +42,4 @@ next-env.d.ts
 
 # Ensuring GeoJSON data folder is not ignored
 !public/data/
-!public/data/*.geo
+!public/data/*.geojson
