@@ -1,103 +1,110 @@
-import Image from "next/image";
+import Link from "next/link";
+import { FaMap, FaInfoCircle, FaListUl, FaChartBar } from "react-icons/fa";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="bg-gradient-to-br from-white via-sky-50 to-blue-100 min-h-screen p-6 md:p-12 text-gray-900">
+      {/* Hero */}
+      <section className="text-center space-y-4 max-w-4xl mx-auto mb-20">
+        <h1 className="text-5xl font-extrabold text-blue-900 drop-shadow-md tracking-tight">
+          Understanding Zoning in Wake Forest, NC
+        </h1>
+        <p className="text-lg text-gray-700 max-w-2xl mx-auto drop-shadow-sm">
+          Zoning determines how land in a city can be used—whether for homes, businesses,
+          factories, or parks. This educational tool helps residents understand the system
+          shaping their neighborhoods.
+        </p>
+        <div className="mt-6 flex justify-center gap-4">
+          <Link
+            href="/interactive-map"
+            className="px-6 py-3 bg-blue-700 text-white font-semibold rounded-xl shadow-lg hover:bg-blue-800 transition"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            View Interactive Map
+          </Link>
+          <Link
+            href="/about"
+            className="px-6 py-3 bg-white text-blue-700 border border-blue-700 font-semibold rounded-xl shadow hover:bg-blue-50 transition"
           >
-            Read our docs
-          </a>
+            Learn More
+          </Link>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* 3D Zoning Types Section */}
+      <section className="space-y-8 mb-24">
+        <h2 className="text-3xl font-bold text-center text-blue-800 mb-6 drop-shadow">
+          Zoning Categories Explained
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Residential",
+              color: "from-blue-100 to-blue-300",
+              text: "Areas for housing: single-family homes, duplexes, and apartments.",
+            },
+            {
+              title: "Commercial",
+              color: "from-green-100 to-green-300",
+              text: "Zones for shops, offices, restaurants, and local businesses.",
+            },
+            {
+              title: "Industrial",
+              color: "from-yellow-100 to-yellow-300",
+              text: "Spaces for manufacturing, warehousing, and large-scale facilities.",
+            },
+          ].map(({ title, color, text }) => (
+            <div
+              key={title}
+              className={`bg-gradient-to-br ${color} p-6 rounded-3xl shadow-xl transform transition hover:scale-105 hover:shadow-2xl`}
+            >
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">{title} Zones</h3>
+              <p className="text-gray-700 text-sm">{text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Table of Contents */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold text-blue-800 text-center mb-6">Site Contents</h2>
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {[
+            {
+              icon: <FaMap className="text-blue-600 text-xl" />,
+              title: "Interactive Zoning Map",
+              href: "/interactive-map",
+              desc: "Explore a live, color-coded zoning map of Wake Forest. Click zones to see their rules and examples.",
+            },
+            {
+              icon: <FaListUl className="text-green-600 text-xl" />,
+              title: "Zoning Class Definitions",
+              href: "/zoning-definitions",
+              desc: "Understand what each zoning class (like GR3 or RMX) allows—uses, rules, and building examples.",
+            },
+            {
+              icon: <FaChartBar className="text-yellow-600 text-xl" />,
+              title: "Visual Analysis",
+              href: "/charts-analysis",
+              desc: "View data visualizations like pie charts, bar graphs, and R-powered insights from Wake Forest zoning data.",
+            },
+            {
+              icon: <FaInfoCircle className="text-purple-600 text-xl" />,
+              title: "About This Project",
+              href: "/about",
+              desc: "Learn why this resource was created, how the data was prepared, and how you can use it for advocacy or learning.",
+            },
+          ].map(({ icon, title, href, desc }) => (
+            <Link
+              key={href}
+              href={href}
+              className="bg-white p-5 rounded-2xl border hover:shadow-md hover:scale-[1.01] transition space-y-2"
+            >
+              <div className="flex items-center gap-2 font-semibold text-lg">{icon} {title}</div>
+              <p className="text-sm text-gray-700">{desc}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }
