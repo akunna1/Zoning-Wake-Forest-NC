@@ -11,8 +11,8 @@ export default function Navbar() {
 
   const links = [
     { name: "Map", href: "/map" },
-    { name: "Definitions", href: "/zoning-definitions" },
-    { name: "Analysis", href: "/charts-analysis" },
+    { name: "Definitions", href: "/definitions" },
+    { name: "Analysis", href: "/analysis" },
     { name: "About", href: "/about" },
   ];
 

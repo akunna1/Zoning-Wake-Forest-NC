@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 
 // Overridding metadata for this specific page
 export const metadata: Metadata = {
-  title: "Zoning | Map",
+  title: "Zoning | Analysis",
 };
 
 export default function UseStateLayout({ children }: { children: ReactNode }) {

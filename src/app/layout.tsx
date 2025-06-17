@@ -13,27 +13,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Zoning in Wake Forest",
+  title: "Zoning for Dummies",
   description: "Created by Akunna Onyekachi",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <head>
-        {/* for font*/}
-        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-
-        {/* Favicon */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+          rel="stylesheet"
+        />
         <link rel="icon" href="/photos/favicon2.png" type="image/svg+xml" />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
