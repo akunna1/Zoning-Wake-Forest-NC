@@ -36,7 +36,7 @@ export default function Footer() {
             . All rights reserved.
           </p>
           <p className="mt-1 italic text-yellow-700 text-xs">
-            City and Regional Planning.
+           Department of City and Regional Planning
           </p>
         </div>
 
