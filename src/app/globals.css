@@ -9,3 +9,11 @@ body {
   line-height: 1.8;
   color: #333;
 }
+
+.neon-outline {
+  text-shadow:
+    0 0 2px white,
+    0 0 4px white,
+    0 0 6px white;
+  -webkit-text-stroke: 3px white;
+}
