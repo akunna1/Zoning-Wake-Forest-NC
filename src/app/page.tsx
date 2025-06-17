@@ -63,9 +63,9 @@ export default function HomePage() {
               aria-label={`${title} zoning category`}
               className={`bg-gradient-to-br ${color} text-gray-900 p-6 rounded-3xl shadow-lg transform transition hover:scale-105 hover:shadow-2xl cursor-pointer select-none focus:outline-none focus:ring-4 focus:ring-yellow-400`}
             >
-              <div className="text-4xl mb-3">{icon}</div>
-              <p className="text-xl font-semibold mb-2">{title} Zones</p>
-              <p className="text-sm">{description}</p>
+              <div className="text-4xl mb-3 flex justify-center">{icon}</div>
+              <p className="text-xl font-semibold mb-2 flex justify-center text-center">{title} Zones</p>
+              <p className="text-sm flex justify-center text-center">{description}</p>
             </div>
           ))}
         </div>
