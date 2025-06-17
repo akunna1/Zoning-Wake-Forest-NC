@@ -79,7 +79,7 @@ const InteractiveMap = () => {
 
       {/* Legend */}
       <div className="absolute top-6 right-6 bg-white/95 rounded-xl shadow-xl p-4 max-h-[80vh] overflow-y-auto w-64 border text-sm">
-        <p className="text-base font-bold mb-2 text-blue-800">Zoning Definitions</p>
+        <p className="text-base font-bold mb-2 text-blue-800">Zoning Names</p>
         <ul className="space-y-1">
           {Object.entries(zoneMap).map(([zone, color]) => (
             <li key={zone} className="flex items-center gap-2">
