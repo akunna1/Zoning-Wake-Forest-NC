@@ -36,7 +36,7 @@ export default function Footer() {
             . All rights reserved.
           </p>
           <p className="mt-1 italic text-yellow-700 text-xs">
-           Department of City and Regional Planning
+           Planning | Town of Wake Forest
           </p>
         </div>
 
