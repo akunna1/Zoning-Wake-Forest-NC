@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
+import { FaInfoCircle } from "react-icons/fa";
+import { IoIosCloseCircle } from "react-icons/io";
 
 const ZONE_COLORS = [
   "#f87171", "#facc15", "#4ade80", "#60a5fa", "#c084fc",
@@ -23,6 +25,7 @@ const ZONE_COLORS = [
 const InteractiveMap = () => {
   const [geoData, setGeoData] = useState<any>(null);
   const [zoneMap, setZoneMap] = useState<{ [zone: string]: string }>({});
+  const [showLegend, setShowLegend] = useState(false);
 
   useEffect(() => {
     fetch("/data/wake_forest_zoning.geojson")
@@ -77,21 +80,45 @@ const InteractiveMap = () => {
         )}
       </MapContainer>
 
-      {/* Legend */}
-      <div className="absolute top-6 right-6 bg-white/95 rounded-xl shadow-xl p-4 max-h-[80vh] overflow-y-auto w-64 border text-sm">
-        <p className="text-base font-bold mb-2 text-blue-800">Zoning Names</p>
-        <ul className="space-y-1">
-          {Object.entries(zoneMap).map(([zone, color]) => (
-            <li key={zone} className="flex items-center gap-2">
-              <span
-                className="inline-block w-4 h-4 rounded-sm border border-gray-300"
-                style={{ backgroundColor: color }}
-              />
-              {zone}
-            </li>
-          ))}
-        </ul>
+      {/* Info icon to toggle legend on all screens */}
+      <div className="absolute top-6 right-6 z-20">
+        {!showLegend && (
+          <button
+            onClick={() => setShowLegend(true)}
+            className="text-gray-900 hover:text-gray-600 bg-white p-2 rounded-full shadow-lg hover:bg-blue-50 transition"
+            aria-label="Show zoning legend"
+          >
+            <FaInfoCircle className="text-2xl" />
+          </button>
+        )}
       </div>
+
+      {/* Legend panel */}
+      {showLegend && (
+        <div className="absolute top-6 right-6 bg-white/95 rounded-xl shadow-xl p-4 max-h-[80vh] overflow-y-auto w-64 border text-sm z-30">
+          <div className="flex justify-between items-center mb-2">
+            <p className="text-base font-bold text-blue-800">Zoning Names</p>
+            <button
+              onClick={() => setShowLegend(false)}
+              aria-label="Close zoning legend"
+              className="text-gray-600 hover:text-gray-900 transition"
+            >
+              <IoIosCloseCircle size={24} />
+            </button>
+          </div>
+          <ul className="space-y-1">
+            {Object.entries(zoneMap).map(([zone, color]) => (
+              <li key={zone} className="flex items-center gap-2">
+                <span
+                  className="inline-block w-4 h-4 rounded-sm border border-gray-300"
+                  style={{ backgroundColor: color }}
+                />
+                {zone}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </main>
   );
 };
