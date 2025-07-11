@@ -91,7 +91,7 @@ export default function Canalysis() {
 
         <section className="mb-10 max-w-4xl mx-auto animate-fadeIn delay-400">
           <h3 className="text-2xl font-semibold mb-4 text-center text-purple-700">
-            Zone Names
+            Zone Names Found
           </h3>
           <div className="overflow-y-auto max-h-72 border border-purple-200 rounded-xl bg-purple-50 p-6 shadow-inner">
             <ol className="list-decimal list-inside space-y-1 text-gray-700 font-mono">
