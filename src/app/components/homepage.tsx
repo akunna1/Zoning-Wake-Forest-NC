@@ -89,14 +89,14 @@ export default function Homepage() {
               icon: <FaListUl className="text-green-600 text-xl" />,
               title: "Zoning Class Definitions",
               href: "/definitions",
-              desc: "Understand what each zoning class (like GR3 or RMX) allows—uses, rules, and building examples.",
+              desc: "Understand what each zoning class (like RZ-19-05) allows—uses, rules, and building examples.",
               bg: "from-lime-50 to-green-100",
             },
             {
               icon: <FaChartBar className="text-yellow-600 text-xl" />,
-              title: "Visual Analysis",
+              title: "Data Cleaning",
               href: "/analysis",
-              desc: "View data visualizations like pie charts, bar graphs, and R-powered insights from Wake Forest zoning data.",
+              desc: "Removing duplicates, fixing typos, standardizing codes, and preparing clear layers for accurate mapping using R.",
               bg: "from-yellow-50 to-orange-100",
             },
             {

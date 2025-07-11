@@ -66,7 +66,7 @@ export default function Canalysis() {
     <main className="min-h-screen bg-gradient-to-tr from-sky-100 via-yellow-50 to-pink-100 py-16 px-6 md:px-20 font-sans">
       <div className="max-w-5xl mx-auto bg-white bg-opacity-90 backdrop-blur-md rounded-3xl shadow-2xl p-12 border border-pink-300 border-opacity-40">
         <h2 className="text-5xl font-extrabold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-500 drop-shadow-md animate-fadeIn">
-          About the R Analysis
+          About R Analysis
         </h2>
 
         <p className="mb-8 text-lg leading-relaxed text-gray-800 max-w-3xl mx-auto animate-fadeIn delay-100">
