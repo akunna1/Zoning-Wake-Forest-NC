@@ -1,6 +1,6 @@
 # 🏙️ Zoning for Dummies: Understanding Zoning in Wake Forest, NC
 
-**Live demo:** [zoning-wake-forest-nc.vercel.app](https://zoning-wake-forest-nc.vercel.app/)
+**Link:** [zoning-wake-forest-nc.vercel.app](https://zoning-wake-forest-nc.vercel.app/)
 
 ---
 
