@@ -75,9 +75,3 @@ This app is ideal for:
 
 Special thanks to the Town of Wake Forest Planning Department and public data providers for access to zoning datasets and GIS resources.
 
----
-
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).
-
